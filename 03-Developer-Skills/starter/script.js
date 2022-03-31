@@ -11,4 +11,4 @@ if (x === 42) {
 
 const calcAge = birthYear => 2037 - birthYear;
 
-console.log();
+console.log(calcAge(1937));
