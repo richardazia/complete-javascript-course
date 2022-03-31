@@ -51,7 +51,7 @@ const temperatures = [3, -2, -6, -1, 'error', 9, 13, 17, 15, 14, 9, 5];
 
 // Problem 2:
 // Function should now receive two arrays, one of temperatures and one of dates.
-
+/*
 const calcTempAmplitudeNew = function (t1, t2) {
   const temps = t1.concat(t2);
   console.log(temps);
@@ -78,3 +78,19 @@ const amplitudeNew = calcTempAmplitudeNew(
 console.log(
   `The difference between the warmest and coldest parts of the day is ${amplitudeNew} degrees.`
 );
+*/
+
+const measureKelving = function () {
+  const measurement = {
+    type: 'temp',
+    unit: 'C',
+    value: prompt('What is the temperature? Please use a number.'),
+  };
+  // const kelvin = measurement.value + 273.15;
+  const kelvin = parseInt(measurement.value) + 273.15;
+  return kelvin;
+};
+
+console.log(measureKelving());
+
+// I added parseInt to the measurement.value to change its type to number.
