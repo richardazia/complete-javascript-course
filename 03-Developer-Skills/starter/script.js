@@ -15,7 +15,7 @@
 
 // Problem 1:
 
-const temperatures = [3, -2, -6, -1, 'error', 9, 13, 17, 15, 14, 9, 5];
+// const temperatures = [3, -2, -6, -1, 'error', 9, 13, 17, 15, 14, 9, 5];
 
 // Define the problem
 // Find the Diurnal Range/amplitude.
@@ -80,17 +80,51 @@ console.log(
 );
 */
 
-const measureKelving = function () {
-  const measurement = {
-    type: 'temp',
-    unit: 'C',
-    value: prompt('What is the temperature? Please use a number.'),
-  };
-  // const kelvin = measurement.value + 273.15;
-  const kelvin = parseInt(measurement.value) + 273.15;
-  return kelvin;
-};
+// const measureKelving = function () {
+//   const measurement = {
+//     type: 'temp',
+//     unit: 'C',
+//     value: prompt('What is the temperature? Please use a number.'),
+//   };
+//   // const kelvin = measurement.value + 273.15;
+//   const kelvin = parseInt(measurement.value) + 273.15;
+//   return kelvin;
+// };
 
-console.log(measureKelving());
+// console.log(measureKelving());
 
 // I added parseInt to the measurement.value to change its type to number.
+
+// Developer Skills and Editor Setup
+// Coding Challenge #1
+
+/*
+Your tasks:
+1. Create a function 'printForecast' which takes in an array 'arr' and logs a 
+string like the above to the console. Try it with both test datasets.
+2. Use the problem-solving framework: Understand the problem and break it up 
+into sub-problems
+*/
+
+// Take each item and add a string to the array item
+// for each string we need to increase by one
+
+const data1 = [17, 21, 23];
+const data2 = [12, 5, 0, 4];
+
+const printForecast = data1 => {
+  for (let i = 0; i < data1.length; i++) {
+    const currentTemp = data1[i];
+    console.log(`... ${currentTemp}°C in ${i + 1} day`);
+  }
+};
+
+const printForecast2 = data2 => {
+  for (let i = 0; i < data2.length; i++) {
+    const currentTemp = data2[i];
+    console.log(`... ${currentTemp}°C in ${i + 1} day`);
+  }
+};
+
+console.log(printForecast(data1));
+console.log(printForecast2(data2));
