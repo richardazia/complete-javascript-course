@@ -111,20 +111,39 @@ into sub-problems
 
 const data1 = [17, 21, 23];
 const data2 = [12, 5, 0, 4];
+var day = 'day';
 
-const printForecast = data1 => {
-  for (let i = 0; i < data1.length; i++) {
-    const currentTemp = data1[i];
-    console.log(`... ${currentTemp}°C in ${i + 1} day`);
+// const printForecast = data1 => {
+//   for (let i = 0; i < data1.length; i++) {
+//     const currentTemp = data1[i];
+//     console.log(`... ${currentTemp}°C in ${i + 1} day`);
+//   }
+// };
+
+// const printForecast2 = data2 => {
+//   for (let i = 0; i < data2.length; i++) {
+//     const currentTemp = data2[i];
+//     console.log(`... ${currentTemp}°C in ${i + 1} day`);
+//   }
+// };
+
+// console.log(printForecast(data1));
+// console.log(printForecast2(data2));
+
+// Course Solution:
+// var day = function () {
+//   if ((day = [i + 1] == 1)) {
+//     return 'day';
+//   } else {
+//     return 'days';
+//   }
+// };
+
+const printForecast = function (arr) {
+  let str = ''; // empty string
+  for (let i = 0; i < arr.length; i++) {
+    str = str + `${arr[i]}°C in ${i + 1} days\n`;
   }
+  console.log(str);
 };
-
-const printForecast2 = data2 => {
-  for (let i = 0; i < data2.length; i++) {
-    const currentTemp = data2[i];
-    console.log(`... ${currentTemp}°C in ${i + 1} day`);
-  }
-};
-
-console.log(printForecast(data1));
-console.log(printForecast2(data2));
+printForecast(data1);
