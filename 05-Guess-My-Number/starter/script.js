@@ -54,6 +54,7 @@ document.querySelector('.again').addEventListener('click', function () {
   document.querySelector('.number').textContent = '??';
   document.querySelector('.score').textContent = 20;
   document.querySelector('.message').textContent = 'Make your Guess!';
+  document.querySelector('.guess').value = '';
   number = Math.trunc(Math.random() * 20) + 1;
   console.log(number);
 });
